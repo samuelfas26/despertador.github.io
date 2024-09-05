@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despertador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fundo Animado -->
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <!-- Conteúdo do Despertador -->
+    <div class="content">
+        <!-- Imagem no lugar do texto -->
+        <img src="png1.png" alt="Despertador" class="alarm-image">
+        
+        <!-- Campo de seleção do horário -->
+        <label for="alarmTime">Escolha um horário:</label>
+        <input type="time" id="alarmTime">
+        
+        <!-- Seleção de som -->
+        <label for="soundSelect">Escolha o som do alarme:</label>
+        <select id="soundSelect">
+            <option value="sound1.mp3">Sound 1</option>
+            <option value="sound2.mp3">Sound 2</option>
+            <option value="sound3.mp3">Sound 3</option>
+            <option value="sound4.mp3">Sound 4</option>
+            <option value="sound5.mp3">Sound 5</option>
+        </select>
+
+        <!-- Botão para testar o som -->
+        <button onclick="testSound()">Testar Som</button>
+
+        <!-- Botão para definir o alarme -->
+        <button onclick="setAlarm()">Definir Alarme</button>
+
+        <!-- Botão para parar o som (caso esteja tocando) -->
+        <button onclick="stopSound()">Parar Som</button>
+
+        <!-- Relógio para visualizar o horário atual -->
+        <p id="currentTime"></p>
+    </div>
+
+    <!-- Som do Alarme -->
+    <audio id="alarmSound" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
